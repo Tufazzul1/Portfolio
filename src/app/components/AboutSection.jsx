@@ -55,38 +55,22 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" alt="about.pic" width={500} height={500} />
+        <Image src="/images/about-image.png" alt="about.pic" width={500} height={400} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             I am a frontend developer who loves building interactive and responsive web apps. I have experience with JavaScript, React, Node.js, Express, MongoDB, Tailwind CSS, HTML, CSS, and Git. I learn quickly and always seek to improve my skills. I enjoy working in teams to create great applications.
           </p>
-          {/* <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
+          <h2 className="text-4xl font-bold text-white mb-4 my-5">Education</h2>
+          <div className="flex items-center space-x-3">
+            <div>
+              <Image src="/images/projects/polytechnic.jpeg" alt="Facebook Icon" width={36} height={36} className="rounded-lg mt-1 ml-1" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold">Diploma in computer technology</h4>
+              <h5>Sylhet Polytechnic Institute</h5>
+            </div>
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div> */}
         </div>
       </div>
     </section>
