@@ -5,7 +5,9 @@ const Skill = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center"> My Skills and Tools</h2>
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        My Skills
+      </h2>
         <div className="grid grid-cols-3 md:grid-cols-4 gap-3 max-w-xl mx-auto">
           <div className="flex items-center justify-center">
             <Image src="/images/projects/react-svgrepo-com.svg" alt="React" width={10} height={10} className="w-16 h-16" />
