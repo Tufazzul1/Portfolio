@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, features, clientCode, serverCode }) => {
+  const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+  const toggleFeaturesVisibility = () => {
+    setIsFeaturesVisible(!isFeaturesVisible);
+  };
   return (
     <div>
       <div
@@ -27,9 +32,28 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
+        <div className="flex justify-between mt-3">
+        <Link className="btn text-blue-900 flex items-center" href={clientCode}>Client code <FaArrowRight /></Link>
+        <Link className="btn text-blue-900 flex items-center" href={serverCode}> Server code <FaArrowRight /></Link>
+        </div>
+        <button
+          onClick={toggleFeaturesVisibility}
+          className="text-sm text-[#3c19b0] hover:text-white"
+        >
+          {isFeaturesVisible ? "Hide Features" : "Show Features"}
+        </button>
+        {isFeaturesVisible && (
+          <ul className="mt-2 text-sm text-[#ADB7BE] list-disc pl-5">
+            {features?.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
 };
 
 export default ProjectCard;
+
+

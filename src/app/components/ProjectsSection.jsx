@@ -11,8 +11,14 @@ const projectsData = [
     description: "Surveyz is a web application designed to help users create, manage, and participate in surveys.",
     image: "/images/projects/surveyz-17ed8.web.app_.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Tufazzul1/Surveyz-client-side-",
     previewUrl: "https://surveyz-17ed8.web.app",
+    features: ["Surveyz provides real-time updates and instant results for surveys, allowing users to see immediate feedback and responses.",
+      "The application uses Firebase for secure user authentication, ensuring that only authorized users can access and participate in surveys.",
+      "An intuitive admin dashboard allows administrators to manage users, surveys, and survey responses efficiently. This includes creating new surveys, modifying existing ones, and viewing detailed analytics."],
+    clientCode: "https://github.com/Tufazzul1/Surveyz-client-side-",
+    serverCode: "https://github.com/Tufazzul1/Surveyz-server-side-"
+
   },
   {
     id: 2,
@@ -20,8 +26,13 @@ const projectsData = [
     description: "Scholar Net is a web application designed to enhance the experience of finding and exploring books.",
     image: "/images/projects/scholkarNet.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Tufazzul1/ScholarNet-client",
     previewUrl: "https://scholar-net.netlify.app",
+    features: ["Implement a robust search feature that allows users to search for books by , category. This feature significantly enhances the user experience by helping users find relevant books quickly.",
+      "Introduce user authentication to enable features like borrowing books, saving favorites, writing reviews, and accessing personalized recommendations. Users can have their profiles where they can track their borrowing history, manage their favorites, and update their information.",
+      "Use algorithms to provide personalized book recommendations based on users' borrowing history, ratings, and preferences. This feature helps users discover new books they might be interested in and encourages them to explore different genres."],
+    clientCode: "https://github.com/Tufazzul1/ScholarNet-client",
+    serverCode: "https://github.com/Tufazzul1/ScholarNet-server"
   },
   {
     id: 3,
@@ -31,6 +42,11 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://tripify-auth-536be.web.app/",
+    features: ["Provide detailed information about travel destinations, including descriptions, images, attractions, activities, local culture, and travel tips. This feature helps users explore and learn about various places.",
+      "Implement a search and filtering system that allows users to search for destinations, flights, hotels, or activities based on specific criteria (e.g., location, date, price, rating). This feature enhances user experience by making it easier to find relevant travel options.",
+      "Allow users to book flights, hotels, tours, or other travel-related services directly through the website. This feature often includes integration with payment gateways and confirmation emails."],
+    clientCode: "https://github.com/Tufazzul1/Tripify-client",
+    serverCode: "https://github.com/Tufazzul1/Tripify-server"
   }
 ];
 
@@ -73,6 +89,9 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              features={project.features}
+              clientCode={project.clientCode}
+              serverCode={project.serverCode}
             />
           </motion.li>
         ))}
